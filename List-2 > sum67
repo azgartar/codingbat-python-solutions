@@ -1,0 +1,14 @@
+## an alternative solution to the List-2 > sum67 problem on codingbat
+
+def sum67(nums):
+    ## Use switch variable 0/1 to identify when to start and stop adding
+    switch = 0
+    total = 0
+    for i in nums:
+        if i != 6 and switch == 0:
+            total = total + i
+        else:
+            switch = 1
+            if i == 7 and switch == 1:
+                switch = 0
+    return total
